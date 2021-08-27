@@ -1,0 +1,94 @@
+//ALL GRIDS CONFIG
+
+
+.grid-1{
+
+    width: calc(8.33333% - 8px);
+    margin: 4px;
+    padding: 16px 0px;
+    float: left;
+
+}
+
+.grid-2{
+
+    width: calc(100% - 8px);
+    margin: 4px;
+    padding: 16px 0px;
+    float: left;
+
+}
+
+.grid-3 {
+
+    width: calc(25% - 8px);
+    margin: 4px;
+    padding: 16px 0px;
+    float: left;
+
+}
+
+.grid-4{
+
+    width: calc(100% - 8px);
+    margin: 4px;
+    padding: 16px 0px;
+    float: left;
+
+}
+
+.grid-5{
+
+    width: calc(41.66667% - 8px);
+    margin: 4px;
+    padding: 16px 0px;
+    float: left;
+    
+
+}
+
+.grid-photos{
+
+    max-height: 720px;
+
+}
+
+.grid-photo-1{
+
+    animation: grid-photo-1 10s ease infinite alternate;
+
+}
+
+.grid-nobreak-6{
+
+    width: calc(50% - 8px);
+    margin: 4px;
+    padding: 16px 0px;
+    float: left;
+
+}
+
+.flex-center{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.flex-start-row{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.flex-columm{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

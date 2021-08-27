@@ -1,0 +1,92 @@
+@keyframes grid-photo-1{
+
+    0%{
+        transform: translate3d(0, -70%, 0);
+    }
+
+    100%{
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+@keyframes typing{
+
+    from {
+
+        width: 0;
+
+    }
+
+    to{
+
+        width: 54%;
+
+    }
+
+}
+
+@keyframes blink-caret{
+
+    from, to{
+
+        border-color: transparent;
+
+    }
+
+
+    50%{
+
+        border-color: $blue-normal;
+
+    }
+
+}
+
+@keyframes rotate1{
+
+    0%{
+
+        transform: rotate(0deg);
+
+    }
+
+    100%{
+
+        transform: rotate(50deg);
+
+    }
+
+}
+
+@keyframes rotate2{
+
+    0%{
+
+        transform: rotate(0deg);
+
+    }
+
+    100%{
+
+        transform: rotate(90deg);
+
+    }
+
+}
+
+@keyframes rotate3{
+
+    0%{
+
+        transform: rotate(0deg);
+
+    }
+
+    100%{
+
+        transform: rotate(240deg);
+
+    }
+
+}
