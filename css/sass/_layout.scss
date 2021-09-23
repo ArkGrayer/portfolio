@@ -2,11 +2,28 @@
 
 header{
 
+    width: 100%;
+    position: fixed;
     z-index: 998;
+    background-color: transparent;
     transition: 1s ease;
-    opacity: 1;
+    display: block;
+
+    
+
+}
+
+.bg-header {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 
     background: linear-gradient(180deg, #050607 0%, rgba(5, 6, 7, 0) 100%);
+    transition: 3s ease;
 
 }
 
@@ -17,7 +34,6 @@ header{
     display: flex;
 
     overflow: hidden;
-    position: fixed;
     flex-direction: row;
 
 }
@@ -34,6 +50,8 @@ header{
 
 }
 
+
+
 @media screen and (max-width: 960px){
 
     .menu-left{
@@ -47,6 +65,27 @@ header{
         display: none;
 
     }
+
+}
+
+.nav-a{
+
+    display: inline-block;
+    color: $white-light;
+    position: relative;
+    transition: .7s ease;
+    padding: 8px 16px;
+    font-family: 'Saira', sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 100;
+    text-transform: uppercase;
+
+}
+
+.img-logo:hover{
+
+    animation: letterIF-logo 2.5s ease infinite;
 
 }
 

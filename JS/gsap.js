@@ -3,11 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
     var TL = gsap.timeline();
 
     TL
+    .to(".screen-load", {
+
+        duration: 1,
+        opacity: 0,
+        delay: 2.5,
+        filter: 'blur(10px)',
+        ease: "power4.out",
+
+    })
     .from(".bg-hero", {
         
         duration: 2,
         y: 50,
-        delay: 1,
+        delay: 0.5,
         opacity: 0,
         ease: "power2.out", 
 
