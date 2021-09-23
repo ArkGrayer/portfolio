@@ -1,32 +1,32 @@
-<svg width="728" height="1292" viewBox="0 0 728 1292" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M119.25 308.277V1291.25H0.75V170.027L119.25 308.277Z" fill="url(#paint20_linear)" stroke="url(#paint21_linear)" stroke-width="1.5"/>
-<path d="M651.857 821.25H120.75V702.75H726.64L651.857 821.25Z" fill="url(#paint22_linear)" stroke="url(#paint23_linear)" stroke-width="1.5"/>
-<path d="M651.857 287.25L120.75 287.25V168.75L726.64 168.75L651.857 287.25Z" fill="url(#paint24_linear)" stroke="url(#paint25_linear)" stroke-width="1.5"/>
+<svg class="letterIF-logo" width="728" height="1292" viewBox="0 -20 728 1292" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M651.857 821.25H120.75V702.75H726.64L651.857 821.25Z" fill="url(#paint20_linear)" stroke="url(#paint21_linear)" stroke-width="1.5"/>
+<path d="M651.857 287.25L120.75 287.25V168.75L726.64 168.75L651.857 287.25Z" fill="url(#paint22_linear)" stroke="url(#paint23_linear)" stroke-width="1.5"/>
+<path d="M119.25 308.277V1291.25H0.75V170.027L119.25 308.277Z" fill="url(#paint24_linear)" stroke="url(#paint25_linear)" stroke-width="1.5"/>
 <circle cx="60" cy="60" r="59.25" fill="url(#paint26_linear)" stroke="url(#paint27_linear)" stroke-width="1.5"/>
 <defs>
-<linearGradient id="paint20_linear" x1="60" y1="168" x2="60" y2="1292" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint20_linear" x1="728" y1="762" x2="120" y2="762" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#00B2FF"/>
+</linearGradient>
+<linearGradient id="paint21_linear" x1="728" y1="762" x2="120" y2="762" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#00B2FF"/>
+</linearGradient>
+<linearGradient id="paint22_linear" x1="728" y1="228" x2="120" y2="228" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#00B2FF"/>
+</linearGradient>
+<linearGradient id="paint23_linear" x1="728" y1="228" x2="120" y2="228" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#00B2FF"/>
+</linearGradient>
+<linearGradient id="paint24_linear" x1="60" y1="168" x2="60" y2="1292" gradientUnits="userSpaceOnUse">
 <stop stop-color="white"/>
 <stop offset="1"/>
 </linearGradient>
-<linearGradient id="paint21_linear" x1="60" y1="168" x2="60" y2="1292" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint25_linear" x1="60" y1="168" x2="60" y2="1292" gradientUnits="userSpaceOnUse">
 <stop stop-color="white"/>
 <stop offset="1"/>
-</linearGradient>
-<linearGradient id="paint22_linear" x1="728" y1="762" x2="120" y2="762" gradientUnits="userSpaceOnUse">
-<stop/>
-<stop offset="1" stop-color="#00B2FF"/>
-</linearGradient>
-<linearGradient id="paint23_linear" x1="728" y1="762" x2="120" y2="762" gradientUnits="userSpaceOnUse">
-<stop/>
-<stop offset="1" stop-color="#00B2FF"/>
-</linearGradient>
-<linearGradient id="paint24_linear" x1="728" y1="228" x2="120" y2="228" gradientUnits="userSpaceOnUse">
-<stop/>
-<stop offset="1" stop-color="#00B2FF"/>
-</linearGradient>
-<linearGradient id="paint25_linear" x1="728" y1="228" x2="120" y2="228" gradientUnits="userSpaceOnUse">
-<stop/>
-<stop offset="1" stop-color="#00B2FF"/>
 </linearGradient>
 <linearGradient id="paint26_linear" x1="60" y1="-3.62436e-06" x2="-43.4286" y2="236.571" gradientUnits="userSpaceOnUse">
 <stop stop-color="white"/>

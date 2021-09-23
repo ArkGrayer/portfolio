@@ -1489,7 +1489,7 @@ h5:hover {
 
 .screen-load {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 999;
   background-color: #050607;
   position: fixed;
@@ -1507,7 +1507,8 @@ h5:hover {
 }
 
 .screen-load svg {
-  width: 130px !important;
+  width: 200px !important;
+  height: 200px !important;
 }
 
 .flex-column {

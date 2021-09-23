@@ -9,7 +9,7 @@
 .screen-load{
 
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 999;
     background-color: $black-dark;
     position: fixed;
@@ -24,7 +24,8 @@
 
 .screen-load svg{
 
-    width: 130px !important;
+    width: 200px !important;
+    height: 200px !important;
 
 }
 
