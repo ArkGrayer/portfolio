@@ -1480,6 +1480,7 @@ h5:hover {
           filter: blur(0px);
 }
 
+/* CSS charged on animation and config of loading page */
 .sec-load {
   padding: 0;
   margin: 0;
@@ -1488,6 +1489,7 @@ h5:hover {
 }
 
 .screen-load {
+  /* Position of page elements */
   width: 100%;
   height: 100%;
   z-index: 999;
@@ -1543,14 +1545,14 @@ h5:hover {
   transition: 3s ease;
 }
 
-.stroke-logo {
-  stroke-width: 40px;
-}
-
 .letterIF-logo:hover {
   -webkit-transition: 3s ease;
   transition: 3s ease;
   -webkit-animation: letterIF-logo 3.5s ease infinite;
           animation: letterIF-logo 3.5s ease infinite;
+}
+
+.stroke-logo {
+  stroke-width: 40px;
 }
 /*# sourceMappingURL=style.css.map */

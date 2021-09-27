@@ -20,71 +20,68 @@ document.addEventListener('DOMContentLoaded', () => {
         opacity: 0,
         ease: "power2.out", 
 
-    }, "-=0.4")
+    }, "-=1.5")
     .from(".menu-1", {
         
         duration: 1,
-        y: 50,
+        y: 200,
         opacity: 0,
-        delay: 0.3,
         ease: "power2.out", 
 
-    }, "-=0.9")
+    }, "-=0.8")
     .from(".menu-2", {
         
         duration: 1,
-        y: 50,
+        y: 200,
         opacity: 0,
-        delay: 0.3,
         ease: "power2.out", 
 
-    }, "-=0.9")
+    }, "-=0.6")
     .from(".menu-3", {
         
-        duration: 1,
-        y: 50,
+        duration: 1.3,
+        y: 200,
+        delay: 0.5,
         opacity: 0,
-        delay: 0.3,
         ease: "power2.out", 
 
     }, "-=0.2")
     .from(".menu-4", {
         
         duration: 1,
-        y: 50,
+        y: 200,
         opacity: 0,
-        delay: 0.3,
         ease: "power2.out", 
 
-    }, "-=0.9")
+    }, "-=1.2")
     .from(".menu-5", {
         
         duration: 1,
-        y: 50,
+        y: 200,
         opacity: 0,
-        delay: 0.3,
+        delay: 0.2,
         ease: "power2.out", 
 
-    }, "-=0.9")
+    }, "-=1.0")
     .from(".container-item div", {
         
         duration: 1,
-        y: 500,
+        y: 600,
         opacity: 0,
         stagger: {each: 0.2},
-        delay: 0.3,
+        delay: 0.5,
         ease: "power2.out", 
 
-    }, "-=0.8")
+    }, "-=0.4")
     .from(".container-item img", {
         
         duration: 1,
-        y: 500,
+        y: 700,
         opacity: 0,
-        delay: 0.3,
+        delay: 0.8,
         ease: "power2.out", 
 
-    }, "-=0.8")
+    }, "-=1.9")
 
 
     gsap.registerPlugin(ScrollTrigger);
@@ -154,5 +151,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     });
+    
+    //Motion Path to SVG BG-Hero
+
+    /*
+    gsap.registerPlugin(MotionPathPlugin);
+
+    gsap.set("#square1, #square2, #square3", {
+
+        xPercent: -50,
+        yPercent: -50,
+        transformOrigin: "50%, 50%"
+
+    });
+
+    gsap.to("#square1", {
+
+        duration: 3,
+        motionPath: "#bg-heroline3"
+
+    });
+
+    */
 
 })
