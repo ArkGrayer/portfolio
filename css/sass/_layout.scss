@@ -444,15 +444,16 @@ h5:hover{
     font-size: 40px;
     font-weight: 300;
     width: 54%;
-
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     overflow: hidden;
     border-right: .15em solid $blue-normal;
     margin: 0 auto;
     letter-spacing: .15em;
 
-    animation: typing 4s steps(40, end), blink-caret .75s infinite;
-
+    animation: blink-caret 0.7s infinite;
 
 }
 

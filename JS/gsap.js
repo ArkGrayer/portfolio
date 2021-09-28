@@ -152,26 +152,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
     
-    //Motion Path to SVG BG-Hero
+    gsap.registerPlugin(TextPlugin);
 
-    /*
-    gsap.registerPlugin(MotionPathPlugin);
+    const tl2 = gsap.timeline({
 
-    gsap.set("#square1, #square2, #square3", {
-
-        xPercent: -50,
-        yPercent: -50,
-        transformOrigin: "50%, 50%"
+        repeat: -1,
+        repeatDelay: 2,
+        yoyo: true
 
     });
 
-    gsap.to("#square1", {
-
-        duration: 3,
-        motionPath: "#bg-heroline3"
-
-    });
-
-    */
+    tl2.fromTo(".sect-anim", 4, {
+        "border-right-color": "rgba(45, 199, 237, 1)",
+        ease: SteppedEase.config(37),
+        width: "0"
+      }, {
+        "border-right-color": "rgba(255,255,255,0)",
+        ease: SteppedEase.config(37),
+        width: "18.4em"
+      }, 0);
 
 })

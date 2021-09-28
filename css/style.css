@@ -911,24 +911,6 @@ body {
   }
 }
 
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 54%;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 54%;
-  }
-}
-
 @-webkit-keyframes blink-caret {
   from, to {
     border-color: transparent;
@@ -1431,12 +1413,16 @@ h5:hover {
   font-size: 40px;
   font-weight: 300;
   width: 54%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   overflow: hidden;
   border-right: 0.15em solid #2DC7ED;
   margin: 0 auto;
   letter-spacing: .15em;
-  -webkit-animation: typing 4s steps(40, end), blink-caret 0.75s infinite;
-          animation: typing 4s steps(40, end), blink-caret 0.75s infinite;
+  -webkit-animation: blink-caret 0.7s infinite;
+          animation: blink-caret 0.7s infinite;
 }
 
 #square1 {
