@@ -157,11 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const tl2 = gsap.timeline({
 
         repeat: -1,
-        repeatDelay: 2,
+        repeatDelay: 3.5,
         yoyo: true
 
     });
 
+    //Caret animation to get in touch email
     tl2.fromTo(".sect-anim", 4, {
         "border-right-color": "rgba(45, 199, 237, 1)",
         ease: SteppedEase.config(37),
