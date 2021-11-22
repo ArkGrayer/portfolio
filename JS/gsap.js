@@ -179,6 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollTrigger: {
         
                     trigger: "#section-03",
+                    start: "top 50%",
+                    end: "end 00%",
         
         
                 }
@@ -195,6 +197,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollTrigger: {
         
                     trigger: "#section-04",
+                    start: "top 50%",
+                    end: "end 00%",
         
         
                 }
