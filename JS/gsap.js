@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    gsap.registerPlugin(TextPlugin);
     var TL = gsap.timeline();
+
 
     TL
     .to(".screen-load", {
@@ -82,22 +84,28 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power2.out", 
 
     }, "-=1.9")
-    .from("#section-02 div", {
 
-        duration: 1,
-        y: 300,
-        opacity: 0,
-        stagger: {each: 0.2},
-        ease: "power2.out", 
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.from("#section-02 div", {
         
+        scrollTrigger:{
+            trigger: '#section-02',
+            start: 'top 70%',
+            end: 'end 00%',
+        },
+        opacity: 0,
+        y: 200,
+        duration: 1.5,
+        ease: "power2.out",
+        stagger:{each: 0.2},
+
     })
 
 
-    gsap.registerPlugin(ScrollTrigger);
-
     gsap.from("#section-03 div", {
 
-        duration: 1,
+        duration: 2,
         y: 300,
         opacity: 0,
         stagger: {each: 0.2},
@@ -144,9 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     });
-    
-    gsap.registerPlugin(TextPlugin);
-
     const tl2 = gsap.timeline({
 
         repeat: -1,
