@@ -82,25 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power2.out", 
 
     }, "-=1.9")
-
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from("#section-02 div", {
+    .from("#section-02 div", {
 
         duration: 1,
         y: 300,
         opacity: 0,
         stagger: {each: 0.2},
         ease: "power2.out", 
-        scrollTrigger: {
+        
+    })
 
-            trigger: "#section-02",
 
-
-        }
-
-    });
+    gsap.registerPlugin(ScrollTrigger);
 
     gsap.from("#section-03 div", {
 

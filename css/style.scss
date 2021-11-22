@@ -6,6 +6,7 @@
 
 }
 
+@import 'sass/_responsive.scss';
 @import 'sass/_colors.scss';
 @import 'sass/_grids.scss';
 @import 'sass/_typography.scss';
@@ -15,7 +16,7 @@ body{
 
     width: 100%;
 
-    background-color: $black-dark;
+    background-color: #050607;
 
 }
 
@@ -24,9 +25,11 @@ body{
 
     body{
 
-        background-color: $black-light;
+        background-color: #050607;
 
     }
+
+    
 
 }
 

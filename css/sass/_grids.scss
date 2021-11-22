@@ -47,9 +47,52 @@
 
 }
 
+.grid-6{
+
+    width: calc(58.33333% - 8px);
+    margin: 4px;
+    padding: 16px 0px;
+    float: left;
+
+}
+
+@media screen and (max-width: 960px){
+
+    .grid-6{
+    
+    width: calc(100% - 8px);
+    float: none;
+    }
+
+    .grid-5{
+
+        width: calc(100% - 8px);
+        float: none;
+
+    }
+
+    .grid-3{
+
+        width: calc(100% - 8px);
+        float: none;
+
+    }
+
+}
+
 .grid-photos{
 
     max-height: 720px;
+
+}
+
+@media screen and (max-width: 960px){
+
+    .grid-photos{
+
+        max-height: 480px;
+
+    }
 
 }
 

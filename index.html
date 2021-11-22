@@ -31,12 +31,14 @@
 
         <div class="menu navbar">
             <div class="menu-left nav-a">
-                <a href="#section-01" class="link menu-1 nav-a">Home</a>
-                <a href="#section-03" class="link menu-2 nav-a">About</a>
+                <ul class="p-1 menu-hidden">
+                    <a href="#section-01" class="link menu-1 nav-a">Home</a>
+                    <a href="#section-03" class="link menu-2 nav-a">About</a>
+                </ul>
             </div>
 
             <!--SVG LOGO-->
-            <div class="menu-logo menu-3">
+            <section class="screen-adjust menu-logo menu-3">
                 <svg class="letterIF-logo" width="728" height="1292" viewBox="0 -20 728 1292" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="stroke-logo" d="M651.857 821.25H120.75V702.75H726.64L651.857 821.25Z" fill="url(#paint20_linear)" stroke="url(#paint21_linear)" stroke-width="1.5"/>
                     <path class="stroke-logo" d="M651.857 287.25L120.75 287.25V168.75L726.64 168.75L651.857 287.25Z" fill="url(#paint22_linear)" stroke="url(#paint23_linear)" stroke-width="1.5"/>
@@ -78,13 +80,15 @@
                     </defs>
                     </svg>                    
                     
-            </div>
+            </section>
 
             <!-------------------------------------------------------------------------------------------------------------->
             
             <div class="menu-right">
-                <a href="#section-02" class="link menu-4 nav-a">Works</a>
-                <a href="#section-04" class="link menu-5 nav-a">Get In Touch</a>
+                <ul class="p-1 menu-hidden">
+                    <a href="#section-02" class="link menu-4 nav-a">Works</a>
+                    <a href="#section-04" class="link menu-5 nav-a">Get In Touch</a>
+                </ul>
             </div>
         </div>
 
@@ -212,7 +216,7 @@
 
     <!--Container-->
     <section class="container hero" id="section-01">
-        <div class="container-item border">
+        <div class="container-item border grid-6">
 
             <div>
                 <h1>Igor Feitosa</h1>
@@ -247,7 +251,7 @@
 
         <div class="list-item">
 
-            <h2>Selected Works</h2>
+            <h2 class="work-h2">Selected Works</h2>
 
         </div>
 
@@ -309,6 +313,8 @@
                         <img src="img/02.png" class="photo my-1 px-1" alt="">
     
                     </div>
+                    <div class="blur2" style="transform: rotate(180deg) skew(360deg, 0deg); opacity: 1;"></div>
+
             </div>
 
         </div>  

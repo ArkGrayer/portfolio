@@ -24,10 +24,22 @@
 
 }
 
-.screen-load svg{
 
-    width: 200px !important;
-    height: 200px !important;
+.screen-load svg{
+    
+    width: 200px ;
+    height: 200px ;
+    
+}
+
+@media screen and (max-width: 960px){
+
+    .screen-load svg {
+
+        width: 100px;
+        height: 100px;
+
+    }
 
 }
 
