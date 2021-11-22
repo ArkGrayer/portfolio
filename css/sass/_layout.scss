@@ -272,7 +272,6 @@ header{
         -ms-flex-direction: column;
         padding: 32px 16px;
     }
-    
 }
 
 
@@ -288,6 +287,8 @@ header{
     transition: 1s ease;
 
     z-index: -1;
+
+    width: 100%;
 
     opacity: 0;
 

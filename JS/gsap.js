@@ -83,75 +83,147 @@ document.addEventListener('DOMContentLoaded', () => {
         delay: 0.8,
         ease: "power2.out", 
 
-    }, "-=1.9")
+    }, "-=1.9");
 
     gsap.registerPlugin(ScrollTrigger);
-    
-    gsap.from("#section-02 div", {
+
+    ScrollTrigger.matchMedia({
+
+        "(min-width: 960px)": function(){
+            gsap.from("#section-02 div", {
+                duration: 2,
+                y: 300,
+                opacity: 0,
+                stagger:{each: 0.2},
+                ease: "power2.out",
+                scrollTrigger:{
+                    trigger: '#section-02',
+                },
+                
+            });
         
-        scrollTrigger:{
-            trigger: '#section-02',
-            start: 'top 70%',
-            end: 'end 00%',
+            gsap.from("#section-03 div", {
+        
+                duration: 2,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power2.out", 
+                scrollTrigger: {
+        
+                    trigger: "#section-03",
+        
+        
+                }
+        
+            });
+        
+            gsap.from("#section-04 div", {
+        
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power2.out", 
+                scrollTrigger: {
+        
+                    trigger: "#section-04",
+        
+        
+                }
+        
+            });
+        
+            gsap.from("#section-05 div div", {
+        
+                duration: 1,
+                y: 200,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power4.out", 
+                scrollTrigger: {
+        
+                    trigger: "#section-05",
+                    start: "top 80%",
+                    end: "end 00%",
+        
+        
+                }
+        
+            });
         },
-        opacity: 0,
-        y: 200,
-        duration: 1.5,
-        ease: "power2.out",
-        stagger:{each: 0.2},
 
-    })
+        "(max-width: 959px)": function(){
 
-
-    gsap.from("#section-03 div", {
-
-        duration: 2,
-        y: 300,
-        opacity: 0,
-        stagger: {each: 0.2},
-        ease: "power2.out", 
-        scrollTrigger: {
-
-            trigger: "#section-03",
-
+            gsap.from("#section-02 div", {
+                duration: 2,
+                y: 300,
+                opacity: 0,
+                stagger:{each: 0.2},
+                ease: "power2.out",
+                scrollTrigger:{
+                    trigger: '#section-02',
+                    start: "top 50%",
+                    end: "end 00%",
+                },
+                
+            });
+        
+            gsap.from("#section-03 div", {
+        
+                duration: 2,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power2.out", 
+                scrollTrigger: {
+        
+                    trigger: "#section-03",
+        
+        
+                }
+        
+            });
+        
+            gsap.from("#section-04 div", {
+        
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power2.out", 
+                scrollTrigger: {
+        
+                    trigger: "#section-04",
+        
+        
+                }
+        
+            });
+        
+            gsap.from("#section-05 div div", {
+        
+                duration: 1,
+                y: 200,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power4.out", 
+                scrollTrigger: {
+        
+                    trigger: "#section-05",
+                    start: "top 80%",
+                    end: "end 00%",
+        
+        
+                }
+        
+            });
 
         }
 
     });
 
-    gsap.from("#section-04 div", {
-
-        duration: 1,
-        y: 300,
-        opacity: 0,
-        stagger: {each: 0.2},
-        ease: "power2.out", 
-        scrollTrigger: {
-
-            trigger: "#section-04",
-
-
-        }
-
-    });
-
-    gsap.from("#section-05 div div", {
-
-        duration: 1,
-        y: 200,
-        opacity: 0,
-        stagger: {each: 0.2},
-        ease: "power4.out", 
-        scrollTrigger: {
-
-            trigger: "#section-05",
-            start: "top 80%",
-            end: "end 00%",
-
-
-        }
-
-    });
+    
     const tl2 = gsap.timeline({
 
         repeat: -1,
