@@ -1089,6 +1089,12 @@ header {
   flex-direction: row;
 }
 
+.sticky {
+  position: fixed;
+  top: 0 !important;
+  width: 100%;
+}
+
 .menu {
   width: 100%;
   display: flex;
@@ -1137,7 +1143,7 @@ header {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 400px 16px;
+  padding: 25rem 16px;
   display: flex;
   justify-content: center;
   align-items: center;
