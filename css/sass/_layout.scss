@@ -51,7 +51,8 @@ header{
     justify-content: space-between;
 
     padding: 20px 16px;
-    
+
+    background: linear-gradient(180deg, $black-dark 40%, transparent 100%);
 
 
 }
@@ -78,6 +79,7 @@ header{
     line-height: 140%;
     font-weight: 100;
     text-transform: uppercase;
+    
 
 }
 

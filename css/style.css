@@ -95,8 +95,7 @@
   }
 }
 .grid-photo-1 {
-  -webkit-animation: grid-photo-1 10s ease infinite alternate;
-          animation: grid-photo-1 10s ease infinite alternate;
+  animation: grid-photo-1 10s ease infinite alternate;
 }
 
 .grid-nobreak-6 {
@@ -248,6 +247,7 @@ h6 {
 }
 .mask {
   background: linear-gradient(225deg, #2DC7ED 0%, #538BF0 100%);
+  padding-bottom: 0.05em;
   transition: 0.5s ease;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -924,29 +924,12 @@ body {
   padding-bottom: 128px !important;
 }
 
-@-webkit-keyframes grid-photo-1 {
-  0% {
-    transform: translate3d(0, -70%, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
 @keyframes grid-photo-1 {
   0% {
-    transform: translate3d(0, -70%, 0);
+    transform: translate3d(0, -23%, 0);
   }
   100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-@-webkit-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #2DC7ED;
+    transform: translate3d(0, 15%, 0);
   }
 }
 @keyframes blink-caret {
@@ -957,28 +940,12 @@ body {
     border-color: #2DC7ED;
   }
 }
-@-webkit-keyframes rotate1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(50deg);
-  }
-}
 @keyframes rotate1 {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(50deg);
-  }
-}
-@-webkit-keyframes rotate2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(90deg);
   }
 }
 @keyframes rotate2 {
@@ -989,34 +956,12 @@ body {
     transform: rotate(90deg);
   }
 }
-@-webkit-keyframes rotate3 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(240deg);
-  }
-}
 @keyframes rotate3 {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(240deg);
-  }
-}
-@-webkit-keyframes letterIF {
-  0%, 10% {
-    fill-opacity: 0;
-    stroke-dasharray: 0 400;
-  }
-  60% {
-    fill-opacity: 0;
-    stroke-dasharray: 400 0;
-  }
-  100% {
-    fill-opacity: 1;
-    stroke-dasharray: 400 0;
   }
 }
 @keyframes letterIF {
@@ -1031,20 +976,6 @@ body {
   100% {
     fill-opacity: 1;
     stroke-dasharray: 400 0;
-  }
-}
-@-webkit-keyframes letterIF-logo {
-  0%, 10% {
-    stroke-dasharray: 0 500;
-    fill-opacity: 0;
-  }
-  60% {
-    stroke-dasharray: 500 0;
-    fill-opacity: 0;
-  }
-  100% {
-    stroke-dasharray: 0 500;
-    fill-opacity: 0;
   }
 }
 @keyframes letterIF-logo {
@@ -1100,6 +1031,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 20px 16px;
+  background: linear-gradient(180deg, #050607 40%, transparent 100%);
 }
 
 @media screen and (max-width: 960px) {
@@ -1121,8 +1053,7 @@ header {
 }
 
 .img-logo:hover {
-  -webkit-animation: letterIF-logo 2.5s ease infinite;
-          animation: letterIF-logo 2.5s ease infinite;
+  animation: letterIF-logo 2.5s ease infinite;
 }
 
 .flex-end {
@@ -1391,8 +1322,7 @@ h5:hover {
   border-right: 0.15em solid #2DC7ED;
   margin: 0 auto;
   letter-spacing: 0.15em;
-  -webkit-animation: blink-caret 0.7s infinite;
-          animation: blink-caret 0.7s infinite;
+  animation: blink-caret 0.7s infinite;
 }
 
 @media screen and (max-width: 960px) {
@@ -1410,22 +1340,19 @@ h5:hover {
 #square1 {
   transform-origin: center center;
   transform-box: fill-box;
-  -webkit-animation: rotate1 3s ease-in infinite alternate;
-          animation: rotate1 3s ease-in infinite alternate;
+  animation: rotate1 3s ease-in infinite alternate;
 }
 
 #square2 {
   transform-origin: center center;
   transform-box: fill-box;
-  -webkit-animation: rotate2 3s ease-in infinite alternate;
-          animation: rotate2 3s ease-in infinite alternate;
+  animation: rotate2 3s ease-in infinite alternate;
 }
 
 #square3 {
   transform-origin: center center;
   transform-box: fill-box;
-  -webkit-animation: rotate3 5s ease-in infinite alternate;
-          animation: rotate3 5s ease-in infinite alternate;
+  animation: rotate3 5s ease-in infinite alternate;
 }
 
 .foot {
@@ -1486,8 +1413,7 @@ h5:hover {
 
 .letter-IF1, .letter-IF2, .letter-IF3, .letter-IF4 {
   stroke-width: 30px;
-  -webkit-animation: letterIF 2.5s ease forwards;
-          animation: letterIF 2.5s ease forwards;
+  animation: letterIF 2.5s ease forwards;
 }
 
 .letterIF-logo {
@@ -1497,8 +1423,7 @@ h5:hover {
 }
 .letterIF-logo:hover {
   transition: 3s ease;
-  -webkit-animation: letterIF-logo 3.5s ease infinite;
-          animation: letterIF-logo 3.5s ease infinite;
+  animation: letterIF-logo 3.5s ease infinite;
 }
 
 .stroke-logo {
