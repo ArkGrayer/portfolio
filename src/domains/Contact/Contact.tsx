@@ -10,13 +10,17 @@ import {
   FaFilePdf,
   FaLinkedin,
 } from "react-icons/fa";
+import { useI18n } from "../../i18n/I18nContext";
 import "./Contact.scss";
-import resumePdf from "../../assets/docs/igor-feitosa.pdf";
+import resumePdfEn from "../../assets/docs/igor-feitosa-en.pdf";
+import resumePdfPtBR from "../../assets/docs/igor-feitosa-ptBR.pdf";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Contact = () => {
   const container = useRef<HTMLElement>(null);
+  const { locale, t } = useI18n();
+  const resumePdf = locale === "ptBR" ? resumePdfPtBR : resumePdfEn;
 
   useGSAP(
     () => {
@@ -103,10 +107,10 @@ export const Contact = () => {
       <div className="sect hidden">
         <div className="grid-2 my-8 relative">
           <div>
-            <h5>Connect with me!</h5>
+            <h5>{t.contact_subtitle}</h5>
           </div>
           <div>
-            <h2 className="mt-1 pl-3">Get in Touch</h2>
+            <h2 className="mt-1 pl-3">{t.contact_title}</h2>
           </div>
           <div
             id="contact-anim"
@@ -163,7 +167,7 @@ export const Contact = () => {
           <div className="grid-3 flex-start-row">
             <a href={resumePdf} className="link social-link" target="_blank">
               <FaFilePdf className="icon" />
-              Resume
+              {t.contact_resume}
             </a>
           </div>
           <div className="grid-3 flex-start-row">

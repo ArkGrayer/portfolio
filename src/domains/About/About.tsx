@@ -4,12 +4,14 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import img01 from "../../assets/img/01.jpg";
 import img02 from "../../assets/img/02.jpg";
+import { useI18n } from "../../i18n/I18nContext";
 import "./About.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
   const container = useRef<HTMLElement>(null);
+  const { t } = useI18n();
 
   useGSAP(
     () => {
@@ -48,22 +50,17 @@ export const About = () => {
     <section id="section-03" className="aboutme about-section" ref={container}>
       <div className="grid-5 pr-3">
         <div>
-          <h5>About Me</h5>
+          <h5>{t.about_subtitle}</h5>
         </div>
         <div>
           <h2 className="mt-1 pl-2">Igor Feitosa</h2>
         </div>
         <div>
           <p className="mt-3 pl-4 p-1 pp">
-            Software Engineer with a focus on game development in Unity. I spend
-            my time working in C#, specializing in multiplayer architecture and
-            exploring real-time VFX.
+            {t.about_bio_p1}
             <br />
             <br />
-            Programmer with a background in technical support, a past life that
-            taught me how to diagnose and solve complex, user-facing issues. I
-            still enjoy the objective pleasures of building clean, scalable code
-            and seeing systems come to life.
+            {t.about_bio_p2}
           </p>
         </div>
       </div>

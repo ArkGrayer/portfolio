@@ -1,9 +1,11 @@
 import { useRef } from "react";
 import img01 from "../../assets/img/01.jpg";
+import { useI18n } from "../../i18n/I18nContext";
 import "./Hero.scss";
 
 export const Hero = () => {
   const container = useRef<HTMLElement>(null);
+  const { t } = useI18n();
 
   return (
     <section id="section-01" className="hero-section relative" ref={container}>
@@ -180,22 +182,22 @@ export const Hero = () => {
       <div className="container hero">
         <div className="container-item border grid-6">
           <div>
-            <h5>Hi, i'm</h5>
+            <h5>{t.hero_greeting}</h5>
           </div>
           <div>
             <h1>Igor Feitosa</h1>
           </div>
           <div>
             <h2 className="mask text-right mt-7 animate-hud1">
-              Back-End Programmer
+              {t.hero_role1}
             </h2>
           </div>
           <div>
-            <h3 className="mask animate-hud2">Game Developer</h3>
+            <h3 className="mask animate-hud2">{t.hero_role2}</h3>
           </div>
           <div className="flex-end pr-10">
             <a href="#section-02" className="square">
-              WORKS
+              {t.hero_cta}
             </a>
           </div>
         </div>

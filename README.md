@@ -102,16 +102,17 @@ The output will be generated in the `dist` folder, ready to be deployed to Verce
 
 I spend my time working in C#, specializing in multiplayer architecture, and exploring real-time VFX. Always open to discussing game development, software architecture, or backend programming.
 
+<div align="center" style="display: flex; gap: 10px; justify-content: center; padding-top: 20px; padding-bottom: 4px;">
 <a href="www.linkedin.com/in/igorfeitosa" target="_blank">
-- <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" width="64"/>
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" width="64"/>
 </a>
-<br>
 <a href="https://www.github.com/ArkGrayer" target="_blank">
-- <img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white" alt="GitHub" width="64"/>
-</a> <br>
+<img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white" alt="GitHub" width="64"/>
+</a>
 <a href="mailto:igorfeitosa.contact@gmail.com" target="_blank">
-- <img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" width="64"/>
-</a> <br>
+<img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" width="64"/>
+</a> 
+</div>
 
 ---
 

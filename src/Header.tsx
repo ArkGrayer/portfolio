@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { useI18n } from "./i18n/I18nContext";
 import "./Header.scss";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useI18n();
 
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -32,7 +34,7 @@ export const Header = () => {
               duration={800}
               className="link menu-1 nav-a"
             >
-              Home
+              {t.nav_home}
             </Link>
             <Link
               to="section-03"
@@ -40,7 +42,7 @@ export const Header = () => {
               duration={800}
               className="link menu-2 nav-a"
             >
-              About
+              {t.nav_about}
             </Link>
           </ul>
         </div>
@@ -184,7 +186,7 @@ export const Header = () => {
               duration={800}
               className="link menu-4 nav-a"
             >
-              Works
+              {t.nav_works}
             </Link>
             <Link
               to="section-04"
@@ -192,7 +194,7 @@ export const Header = () => {
               duration={800}
               className="link menu-5 nav-a"
             >
-              Get In Touch
+              {t.nav_contact}
             </Link>
           </ul>
         </div>
@@ -208,7 +210,7 @@ export const Header = () => {
             className="mobile-link"
             onClick={toggleMenu}
           >
-            Home
+            {t.nav_home}
           </Link>
           <Link
             to="section-03"
@@ -217,7 +219,7 @@ export const Header = () => {
             className="mobile-link"
             onClick={toggleMenu}
           >
-            About
+            {t.nav_about}
           </Link>
           <Link
             to="section-02"
@@ -226,7 +228,7 @@ export const Header = () => {
             className="mobile-link"
             onClick={toggleMenu}
           >
-            Works
+            {t.nav_works}
           </Link>
           <Link
             to="section-04"
@@ -235,7 +237,7 @@ export const Header = () => {
             className="mobile-link"
             onClick={toggleMenu}
           >
-            Get In Touch
+            {t.nav_contact}
           </Link>
         </ul>
       </div>

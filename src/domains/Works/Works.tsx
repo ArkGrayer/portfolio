@@ -4,12 +4,14 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgPortfolio from "../../assets/img/portfolio.png";
 import imgAura from "../../assets/img/aura-project.jpg";
+import { useI18n } from "../../i18n/I18nContext";
 import "./Works.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Works = () => {
   const container = useRef<HTMLElement>(null);
+  const { t } = useI18n();
 
   useGSAP(
     () => {
@@ -47,7 +49,7 @@ export const Works = () => {
   return (
     <section id="section-02" className="list works-section" ref={container}>
       <div className="list-item">
-        <h2 className="work-h2">Selected Works</h2>
+        <h2 className="work-h2">{t.works_title}</h2>
       </div>
 
       <div className="bb-gray"></div>
