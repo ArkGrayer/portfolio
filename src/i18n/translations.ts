@@ -81,9 +81,9 @@ export const translations: Record<Locale, Translations> = {
     // About
     about_subtitle: "Sobre Mim",
     about_bio_p1:
-      "Engenheiro de Software com foco em desenvolvimento de jogos na Unity. Passo meu tempo trabalhando em C#, me especializando em arquitetura multiplayer e explorando VFX em tempo real.",
+      "Engenheiro de Software com foco em desenvolvimento de jogos na Unity. Dedico meu tempo ao C#, especializando-me em arquitetura multiplayer e explorando efeitos visuais em tempo real.",
     about_bio_p2:
-      "Programador com experiência em suporte técnico, uma vida passada que me ensinou a diagnosticar e resolver problemas complexos voltados ao usuário. Ainda aprecio o prazer objetivo de construir código limpo e escalável e ver sistemas ganharem vida.",
+      "Programador com experiência em suporte técnico, uma vivência que me ensinou a diagnosticar e solucionar problemas complexos voltados para o usuário. Ainda aprecio o prazer objetivo de construir código limpo e escalável e ver sistemas ganharem vida.",
 
     // Contact
     contact_subtitle: "Conecte-se comigo!",
