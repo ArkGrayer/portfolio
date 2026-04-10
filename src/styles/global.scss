@@ -1,0 +1,367 @@
+@use "./variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Mukta:wght@200;300;400;500&family=Saira:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden; // Impede que você arraste a tela pro lado
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  width: 100%;
+  background-color: $black-dark;
+  font-family: $font-primary;
+  color: $white-normal;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "Barlow Condensed", sans-serif;
+  color: $white-light;
+  font-weight: 400;
+}
+p {
+  color: #777;
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 200;
+}
+h1 {
+  font-size: 96px;
+  line-height: 100%;
+}
+h2 {
+  font-size: 72px;
+  line-height: 110%;
+}
+h3 {
+  font-size: 40px;
+  line-height: 115%;
+}
+h4 {
+  font-size: 32px;
+  line-height: 120%;
+}
+h5 {
+  font-size: 24px;
+  line-height: 130%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.5s ease;
+  background: linear-gradient(90deg, #4cdcff 0%, #3661d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h5:hover {
+  padding-left: 8px;
+}
+h6 {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 960px) {
+  h1 {
+    font-family: "Saira", sans-serif;
+    font-size: 56px;
+    line-height: 110%;
+    font-weight: 400;
+  }
+  h2 {
+    font-family: "Saira", sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 500;
+  }
+  h3 {
+    font-family: "Saira", sans-serif;
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 200;
+  }
+  h5 {
+    font-family: "Saira", sans-serif !important;
+    font-size: 14px !important;
+    line-height: 150% !important;
+    font-weight: 500 !important;
+  }
+}
+
+// Utilitários Globais
+.color-gray {
+  color: #777;
+}
+.color-blue {
+  color: #2dc7ed;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.relative {
+  position: relative;
+}
+.hidden {
+  overflow: hidden;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-start-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.flex-columm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 960px) {
+  .flex-end {
+    display: none;
+  }
+}
+.bb-gray {
+  border-bottom: 1px solid #15171a;
+}
+
+// Sistema de Grids
+.grid-1 {
+  width: calc(8.33333% - 8px);
+  margin: 4px;
+  padding: 16px 0px;
+  float: left;
+}
+.grid-2 {
+  width: calc(100% - 8px);
+  margin: 4px;
+  padding: 16px 0px;
+  float: left;
+}
+.grid-3 {
+  width: calc(25% - 8px);
+  margin: 4px;
+  padding: 16px 0px;
+  float: left;
+}
+.grid-4 {
+  width: calc(100% - 8px);
+  margin: 4px;
+  padding: 16px 0px;
+  float: left;
+}
+.grid-5 {
+  width: calc(41.66667% - 8px);
+  margin: 4px;
+  padding: 16px 0px;
+  float: left;
+}
+.grid-6 {
+  width: calc(58.33333% - 8px);
+  margin: 4px;
+  padding: 16px 0px;
+  float: left;
+}
+.grid-nobreak-6 {
+  width: calc(50% - 8px);
+  margin: 4px;
+  padding: 16px 0px;
+  float: left;
+}
+@media screen and (max-width: 960px) {
+  .grid-6,
+  .grid-5,
+  .grid-3 {
+    width: calc(100% - 8px);
+    float: none;
+  }
+}
+
+// Estilização dos Links âncoras (Menu e Contato)
+.link {
+  padding: 8px 24px;
+  font-size: 24px;
+  transition: 0.5s ease;
+  display: inline-block;
+  position: relative;
+}
+.link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  transform: translate(35%, -50%);
+  transition: 0.5s ease;
+  background-color: #f5f7f7;
+}
+.link:hover {
+  opacity: 0.6;
+}
+.link:hover::after {
+  width: 60%;
+}
+
+// Loop SCSS para as quase 300 linhas de margens/paddings originais (m-1, pt-2, etc)
+$spacings: (
+  0: 0,
+  1: 8px,
+  2: 16px,
+  3: 24px,
+  4: 32px,
+  5: 48px,
+  6: 64px,
+  7: 72px,
+  8: 96px,
+  9: 128px,
+);
+
+@each $i, $val in $spacings {
+  .m-#{$i} {
+    margin: $val !important;
+  }
+  .mt-#{$i} {
+    margin-top: $val !important;
+  }
+  .mb-#{$i} {
+    margin-bottom: $val !important;
+  }
+  .ml-#{$i} {
+    margin-left: $val !important;
+  }
+  .mr-#{$i} {
+    margin-right: $val !important;
+  }
+  .mx-#{$i} {
+    margin-left: $val !important;
+    margin-right: $val !important;
+  }
+  .my-#{$i} {
+    margin-top: $val !important;
+    margin-bottom: $val !important;
+  }
+
+  .p-#{$i} {
+    padding: $val !important;
+  }
+  .pt-#{$i} {
+    padding-top: $val !important;
+  }
+  .pb-#{$i} {
+    padding-bottom: $val !important;
+  }
+  .pl-#{$i} {
+    padding-left: $val !important;
+  }
+  .pr-#{$i} {
+    padding-right: $val !important;
+  }
+  .px-#{$i} {
+    padding-left: $val !important;
+    padding-right: $val !important;
+  }
+  .py-#{$i} {
+    padding-top: $val !important;
+    padding-bottom: $val !important;
+  }
+}
+.pr-10 {
+  padding-right: 160px !important;
+}
+
+// Animação e tela de Loading (preparação)
+.sec-load {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.screen-load {
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #050607;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.screen-load svg {
+  width: 200px;
+  height: 200px;
+}
+@media screen and (max-width: 960px) {
+  .screen-load svg {
+    width: 100px;
+    height: 100px;
+  }
+}
+.flex-column {
+  flex-direction: column;
+}
+.letter-IF1,
+.letter-IF2,
+.letter-IF3,
+.letter-IF4 {
+  stroke-width: 30px;
+  animation: letterIF 2.5s ease forwards;
+}
+@keyframes letterIF {
+  0%,
+  10% {
+    fill-opacity: 0;
+    stroke-dasharray: 0 400;
+  }
+  60% {
+    fill-opacity: 0;
+    stroke-dasharray: 400 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dasharray: 400 0;
+  }
+}

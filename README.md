@@ -1,53 +1,120 @@
 <div align="center">
-<img src="resource/img/portfolio.png" width="300" height="153" alt="Portfolio image">
+  
+  # 👨‍💻 Igor Feitosa | Interactive Portfolio
+  
+  **Software Engineer & Game Developer**
 
-# Portfolio
+  <p align="center">
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+    <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" />
+    <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass" />
+  </p>
 
-[![Style Guide: Techmmunity](https://img.shields.io/badge/style%20guide-TECHMMUNITY-01d2ce?style=for-the-badge)](https://github.com/techmmunity/eslint-config)
-![GitHub repo size](https://img.shields.io/github/repo-size/ArkGrayer/portfolio?style=for-the-badge)
-
+  <p align="center">
+    A highly interactive, hardware-accelerated personal portfolio built with modern web technologies. Focuses on fluid 60FPS animations, real-time SVG rendering, and a clean Domain-Driven Design (DDD) architecture.
+  </p>
 </div>
 
-Personal portfolio developed with the purpose of promoting my work
+---
 
-# How to use the project
+## ✨ Key Features
 
-### Necessary tools
-- Live Sass Compiler
-- Live server
+- 🚀 **High-Performance Animations**: Powered by **GSAP 3** (`@gsap/react` and `ScrollTrigger`). Features smooth reveal timelines, parallax scrolling, and interactive hover effects.
+- 🎨 **Hardware-Accelerated SVGs**: Complex background animations engineered with CSS `will-change` and optimized 2D/3D transforms (`translateZ(0)`) to ensure zero dropped frames on mobile GPUs.
+- 📱 **Fully Responsive**: Carefully crafted mobile-first and desktop-optimized layouts. Includes a custom animated Hamburger menu with glassmorphism panels.
+- 🏗️ **DDD Architecture**: Component and style structure modeled after Domain-Driven Design principles for supreme maintainability and scalability.
+- 💅 **Modern Styling**: Styled with **SCSS (Sass)** utilizing automated mixins, smart loops for utility classes, and custom Neon Glow effects.
+- ⚡ **Vite Powered**: Lightning-fast Hot Module Replacement (HMR) and optimized production builds.
 
-## Used Concepts
-- DDD Architecture
-  
-## Dev Tools
-- Prettier
-- Eslint
-- SASS
+---
 
-## Pages
+## 📂 Project Structure
 
-### Landing Page
+The project follows a clean, decoupled architecture:
 
-<img src="resource/img/portfolio.png" alt="Landing Page image">
+```text
+src/
+ ┣ assets/         # Local images, SVGs, and documents (PDFs)
+ ┣ core/           # Globally shared components (Header, Footer)
+ ┣ domains/        # Feature-based modules (Hero, Works, About, Contact)
+ ┃ ┣ About/
+ ┃ ┣ Contact/
+ ┃ ┣ Hero/
+ ┃ ┗ Works/
+ ┣ styles/         # Global SCSS variables, resets, and layout grids
+ ┣ App.tsx         # Main application orchestrator & Timeline Controller
+ ┗ main.tsx        # React root injector
+```
 
-### Selected Works section
+---
 
-<img src="resource/img/selected-works.png" alt="Selected Works image">
+## 🛠️ Getting Started
 
-### About Me section
+### Prerequisites
 
-<img src="resource/img/aboutme.png" alt="About me image">
+Make sure you have Node.js installed.
 
-### Get In Touch section
+### Installation
 
-<img src="resource/img/get-in-touch.png" alt="Get in touch image">
+1. Clone the repository:
 
-### Footer section
+   ```bash
+   git clone https://github.com/ArkGrayer/portfolio.git
+   ```
 
-<img src="resource/img/footer.png" alt="Footer image">
+2. Navigate to the project directory:
 
-## License
+   ```bash
+   cd portfolio
+   ```
 
-This project is under license.
+3. Install dependencies:
 
-[⬆ Get to the top](#porfolio)<br>
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and visit: `http://localhost:5173`
+
+---
+
+## 📦 Building for Production
+
+To generate an optimized, production-ready build, run:
+
+```bash
+npm run build
+```
+
+The output will be generated in the `dist` folder, ready to be deployed to Vercel, Netlify, or GitHub Pages.
+
+---
+
+## 📫 Connect with Me
+
+I spend my time working in C#, specializing in multiplayer architecture, and exploring real-time VFX. Always open to discussing game development, software architecture, or backend programming.
+
+<a href="www.linkedin.com/in/igorfeitosa" target="_blank">
+- <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" width="64"/>
+</a>
+<br>
+<a href="https://www.github.com/ArkGrayer" target="_blank">
+- <img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white" alt="GitHub" width="64"/>
+</a> <br>
+<a href="mailto:igorfeitosa.contact@gmail.com" target="_blank">
+- <img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" width="64"/>
+</a> <br>
+
+---
+
+<div align="center">
+  <i>Designed & Built with 🩵 by Igor Feitosa.</i>
+</div>

@@ -1,0 +1,64 @@
+@use "../../styles/variables.scss" as *;
+
+.works-section {
+  width: 100%;
+
+  .bb-gray {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.list-item {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: z-index 0.3s ease;
+
+  &:hover {
+    z-index: 20; // Eleva a linha inteira para o topo ao passar o mouse
+  }
+
+  a:hover + .img-project {
+    transform: translate(-50%, -50%) translate3d(0px, 0, 0);
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 960px) {
+    -webkit-box-orient: vertical;
+    padding: 32px 16px;
+  }
+}
+
+.work-h2 {
+  @media screen and (max-width: 960px) {
+    font-family: "Saira", sans-serif !important;
+    font-size: 40px !important;
+    line-height: 100% !important;
+    font-weight: 300 !important;
+  }
+}
+
+.img-project {
+  max-width: 720px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: 1s ease;
+  z-index: 10;
+  pointer-events: none;
+  width: 100%;
+  opacity: 0;
+  transform: translate(-50%, -50%) translate3d(-1000px, 0, 0) scale(0)
+    skewX(90deg);
+
+  @media screen and (max-width: 960px) {
+    display: none; // Esconde a imagem no mobile para manter o visual limpo
+  }
+}

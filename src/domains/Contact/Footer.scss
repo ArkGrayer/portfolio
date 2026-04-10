@@ -1,0 +1,52 @@
+@use "../../styles/variables.scss" as *;
+
+.footer-section {
+  width: 100%;
+}
+
+.foot {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 96px 24px;
+  text-align: center;
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  div {
+    filter: blur(0px);
+  }
+
+  p {
+    .author-name {
+      display: inline-block;
+      font-weight: 400;
+      position: relative;
+      transition: 0.5s ease;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        margin-top: 2px;
+        transition: 0.5s ease;
+        background-color: #f5f7f7;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+          background-color: $blue-normal;
+          box-shadow:
+            0 0 8px $blue-normal,
+            0 0 4px $blue-normal;
+        }
+      }
+    }
+  }
+}

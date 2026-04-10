@@ -1,0 +1,222 @@
+@use "./styles/variables.scss" as *;
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 998;
+  background-color: transparent;
+  transition: 1s ease;
+  display: block;
+
+  .bg-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg, $black-dark 0%, rgba(5, 6, 7, 0) 100%);
+    transition: 3s ease;
+  }
+
+  .navbar {
+    position: relative; // Fundamental para o hambúrguer ficar preso à navbar
+    width: 100%;
+    padding: 24px 24px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 16px;
+    background-image: linear-gradient(
+      180deg,
+      $black-dark 40%,
+      transparent 100%
+    );
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+
+    @media screen and (max-width: 960px) {
+      justify-content: center;
+    }
+  }
+
+  &.header-open {
+    .menu {
+      background-color: $black-dark; // Preenche a parte transparente do degradê suavemente
+    }
+  }
+
+  .nav-a {
+    display: inline-block;
+    color: $white-light;
+    position: relative;
+    transition: 0.7s ease;
+    padding: 8px 16px;
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 100;
+    text-transform: uppercase;
+    cursor: pointer; // Adicionado para indicar o clique do react-scroll
+  }
+
+  .menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      height: 48px; // Ajuste de tamanho para o header do React
+      width: auto;
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .menu-left,
+  .menu-right,
+  .menu-hidden {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1000;
+
+  @media screen and (max-width: 960px) {
+    display: flex;
+    position: absolute;
+    left: 24px; // Hambúrguer na esquerda
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $white-light;
+    border-radius: 4px;
+    transition:
+      transform 0.4s ease,
+      opacity 0.3s ease,
+      background-color 0.3s ease;
+    transform-origin: left center;
+  }
+
+  &.is-active {
+    .line {
+      background-color: $blue-normal; // Transição para azul ao abrir
+    }
+    .line:nth-child(1) {
+      transform: rotate(41deg);
+      width: 32px;
+    }
+    .line:nth-child(2) {
+      opacity: 0;
+      transform: translateX(10px);
+    }
+    .line:nth-child(3) {
+      transform: rotate(-41deg);
+      width: 32px;
+    }
+  }
+}
+
+.mobile-menu-panel {
+  position: absolute;
+  top: 100%; // Cai exatamente abaixo da Navbar
+  left: 0;
+  width: 100%;
+  height: auto; // Altura se adapta ao conteúdo
+  background: linear-gradient(
+    180deg,
+    $black-dark 0%,
+    rgba(5, 6, 7, 0.95) 70%,
+    transparent 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 24px;
+  padding-bottom: 64px;
+  z-index: 997;
+
+  // Animação de Dropdown (Caindo de cima pra baixo)
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  .mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center; // Centralizado em forma de lista
+    list-style: none;
+    width: 100%;
+
+    .mobile-link {
+      display: block;
+      color: $white-light;
+      font-family: $font-secondary;
+      font-size: 24px;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 12px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $blue-normal;
+      }
+    }
+  }
+}
+
+.stroke-logo {
+  stroke-width: 40px;
+}
+
+.letterIF-logo:hover {
+  animation: letterIF-logo 2.5s ease infinite;
+}
+
+@keyframes letterIF-logo {
+  0%,
+  10% {
+    stroke-dasharray: 0 500;
+    fill-opacity: 0;
+  }
+  60% {
+    stroke-dasharray: 500 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dasharray: 0 500;
+    fill-opacity: 0;
+  }
+}

@@ -1,0 +1,134 @@
+@use "../../styles/variables.scss" as *;
+
+.contact-section {
+  width: 100%;
+}
+
+.sect {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 96px 24px;
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  div {
+    filter: blur(0px);
+    box-sizing: border-box;
+  }
+  h2 {
+    color: #f5f7f7;
+    font-family: "Saira", sans-serif;
+    font-size: 52px;
+    line-height: 100%;
+    font-weight: 300;
+  }
+
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    padding: 32px 16px;
+    div h2 {
+      font-family: "Saira", sans-serif !important;
+      font-size: 40px !important;
+      line-height: 100% !important;
+      font-weight: 300 !important;
+    }
+  }
+}
+
+.sect-anim {
+  white-space: nowrap;
+  font-family: "Saira", sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  width: 54%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  border-right: 0.15em solid #2dc7ed;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: blink-caret 0.7s infinite;
+
+  @media screen and (max-width: 960px) {
+    font-family: "Saira", sans-serif;
+    font-size: 15px;
+    line-height: 120%;
+    font-weight: 300;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #2dc7ed;
+  }
+}
+
+// Animações das Redes Sociais com Ícones
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.3s ease;
+
+  .icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0; // Proíbe o ícone de ficar espremido no mobile!
+    // Efeito elástico perfeito para o movimento
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  &:hover {
+    color: #2dc7ed; // Muda o texto e o ícone para o seu azul padrão
+    
+    .icon {
+      transform: translateY(-6px) scale(1.15) rotate(5deg);
+      filter: drop-shadow(0px 4px 8px rgba(45, 199, 237, 0.6));
+    }
+  }
+
+  &:active {
+    .icon {
+      transform: translateY(2px) scale(0.9) !important; // Afunda no clique
+      filter: drop-shadow(0px 0px 2px rgba(45, 199, 237, 0.8));
+    }
+  }
+}
+
+// Organização do Grid de Contatos no Mobile
+#section-05 {
+  @media screen and (max-width: 960px) {
+    .row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // 2 Colunas iguais
+      row-gap: 40px;
+      column-gap: 16px; // Garante espaço entre as colunas
+      padding: 0 16px;
+      
+      .grid-3 {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: flex-start; // Mantém alinhado a esquerda na sua coluna
+        
+        .social-link {
+          width: auto; // Remove o tamanho fixo que quebrava o grid
+          justify-content: flex-start;
+          font-size: 16px; // Texto discretamente menor para caber perfeito na tela do celular
+
+          .icon {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
