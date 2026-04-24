@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgPortfolio from "../../assets/img/portfolio.png";
 import imgAura from "../../assets/img/aura-project.jpg";
+import imgWFMasteryTracker from "../../assets/img/wfmastery.png";
 import { useI18n } from "../../i18n/I18nContext";
 import "./Works.scss";
 
@@ -70,6 +71,23 @@ export const Works = () => {
           <h3>Aura Project</h3>
         </a>
         <img src={imgAura} className="img-project" alt="Aura Project" />
+      </div>
+
+      <div className="bb-gray"></div>
+
+      <div className="list-item py-6">
+        <h5 className="color-gray mr-1">03.</h5>
+        <a
+          href="https://github.com/ArkGrayer/warframe-mastery-tracker-V2"
+          target="_blank"
+        >
+          <h3>Warframe Mastery Tracker</h3>
+        </a>
+        <img
+          src={imgWFMasteryTracker}
+          className="img-project"
+          alt="Warframe Mastery Tracker"
+        />
       </div>
 
       <div className="bb-gray"></div>
