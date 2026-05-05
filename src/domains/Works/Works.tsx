@@ -57,7 +57,13 @@ export const Works = () => {
 
       <div className="list-item py-6">
         <h5 className="color-gray mr-1">01.</h5>
-        <a href="" target="_blank">
+        <a
+          href="#top"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           <h3>Portfolio</h3>
         </a>
         <img src={imgPortfolio} className="img-project" alt="Portfolio" />
