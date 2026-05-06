@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgPortfolio from "../../assets/img/portfolio.png";
 import imgAura from "../../assets/img/aura-project.jpg";
 import imgWFMasteryTracker from "../../assets/img/wfmastery.png";
+import imgCrystasTide from "../../assets/img/crystastide.png";
 import { useI18n } from "../../i18n/I18nContext";
 import "./Works.scss";
 
@@ -93,6 +94,20 @@ export const Works = () => {
           src={imgWFMasteryTracker}
           className="img-project"
           alt="Warframe Mastery Tracker"
+        />
+      </div>
+
+      <div className="bb-gray"></div>
+
+      <div className="list-item py-6">
+        <h5 className="color-gray mr-1">04.</h5>
+        <a href="https://github.com/ArkGrayer/crystas-tide/" target="_blank">
+          <h3>Crysta's Tide — 3D Audio Visualizer</h3>
+        </a>
+        <img
+          src={imgCrystasTide}
+          className="img-project"
+          alt="Crysta's Tide — 3D Audio Visualizer"
         />
       </div>
 
